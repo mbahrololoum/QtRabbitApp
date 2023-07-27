@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>663</width>
+    <height>331</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="tabServer">
+       <attribute name="title">
+        <string>Server</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="0">
+         <widget class="QLabel" name="lblServerHost">
+          <property name="text">
+           <string>Host:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1" colspan="2">
+         <widget class="QLineEdit" name="leServerHost">
+          <property name="text">
+           <string>46.245.86.7</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="3" colspan="2">
+         <widget class="QLabel" name="lblServerPort">
+          <property name="text">
+           <string>Port:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="5" colspan="2">
+         <widget class="QLineEdit" name="leServerPort">
+          <property name="text">
+           <string>5672</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="7">
+         <widget class="QLabel" name="lblServerUser">
+          <property name="text">
+           <string>User:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="8" colspan="2">
+         <widget class="QLineEdit" name="leServerUser">
+          <property name="text">
+           <string>admin</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="10">
+         <widget class="QLabel" name="lblServerPass">
+          <property name="text">
+           <string>Pass:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="11">
+         <widget class="QLineEdit" name="leServerPass">
+          <property name="text">
+           <string>admin</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0" colspan="2">
+         <widget class="QLabel" name="lblServerExchange">
+          <property name="text">
+           <string>Exchange:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2" colspan="2">
+         <widget class="QLineEdit" name="leServerExchange">
+          <property name="text">
+           <string>ex-masoud</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="4" colspan="2">
+         <widget class="QLabel" name="lblServerBindingKey">
+          <property name="text">
+           <string>Bind Key:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="6" colspan="2">
+         <widget class="QLineEdit" name="leServerBindingKey">
+          <property name="text">
+           <string>r</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="8">
+         <widget class="QLabel" name="lblServerQueue">
+          <property name="text">
+           <string>Queue:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="9" colspan="2">
+         <widget class="QLineEdit" name="leServerQueue">
+          <property name="text">
+           <string>q-masoud</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="11">
+         <widget class="QPushButton" name="btnStartListening">
+          <property name="text">
+           <string>Start</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0" colspan="12">
+         <widget class="QScrollArea" name="scrollArea">
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="scrollAreaWidgetContents">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>591</width>
+             <height>120</height>
+            </rect>
+           </property>
+           <widget class="QTextEdit" name="teServerLog">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>-1</y>
+              <width>551</width>
+              <height>201</height>
+             </rect>
+            </property>
+            <property name="readOnly">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabClient">
+       <attribute name="title">
+        <string>Client</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="0">
+         <widget class="QLabel" name="lblClientHost">
+          <property name="text">
+           <string>Host:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1" colspan="2">
+         <widget class="QLineEdit" name="leClientHost">
+          <property name="text">
+           <string>46.245.86.7</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="3">
+         <widget class="QLabel" name="lblClientPort">
+          <property name="text">
+           <string>Port:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="4">
+         <widget class="QLineEdit" name="leClientPort">
+          <property name="text">
+           <string>5672</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="5">
+         <widget class="QLabel" name="lblClientUser">
+          <property name="text">
+           <string>User:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="6">
+         <widget class="QLineEdit" name="leClientUser">
+          <property name="text">
+           <string>admin</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="7">
+         <widget class="QLabel" name="lblClientPass">
+          <property name="text">
+           <string>Pass:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="8">
+         <widget class="QLineEdit" name="leClientPass">
+          <property name="text">
+           <string>admin</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0" colspan="2">
+         <widget class="QLabel" name="lblClientExchange">
+          <property name="text">
+           <string>Exchange:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2" colspan="2">
+         <widget class="QLineEdit" name="leClientExchange">
+          <property name="text">
+           <string>ex-masoud</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="4">
+         <widget class="QLabel" name="lblClientRoutingKey">
+          <property name="text">
+           <string>Routing Key:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="5" colspan="2">
+         <widget class="QLineEdit" name="leClientRoutingKey">
+          <property name="text">
+           <string>r</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0" colspan="2">
+         <widget class="QLabel" name="lblClientMessage">
+          <property name="text">
+           <string>Message:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="2" colspan="7">
+         <widget class="QLineEdit" name="leClientMessage">
+          <property name="text">
+           <string>Hello World!</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="4" colspan="2">
+         <widget class="QPushButton" name="btnSendMessage">
+          <property name="text">
+           <string>Send Message</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>663</width>
+     <height>24</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>leServerHost</tabstop>
+  <tabstop>leServerPort</tabstop>
+  <tabstop>leServerUser</tabstop>
+  <tabstop>leServerPass</tabstop>
+  <tabstop>leServerExchange</tabstop>
+  <tabstop>leServerBindingKey</tabstop>
+  <tabstop>leServerQueue</tabstop>
+  <tabstop>btnStartListening</tabstop>
+  <tabstop>teServerLog</tabstop>
+  <tabstop>leClientHost</tabstop>
+  <tabstop>leClientPort</tabstop>
+  <tabstop>leClientUser</tabstop>
+  <tabstop>leClientPass</tabstop>
+  <tabstop>leClientExchange</tabstop>
+  <tabstop>leClientRoutingKey</tabstop>
+  <tabstop>leClientMessage</tabstop>
+  <tabstop>btnSendMessage</tabstop>
+  <tabstop>scrollArea</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>btnStartListening</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>onStartListening()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>189</x>
+     <y>206</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnSendMessage</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>onSendMessage()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>292</x>
+     <y>282</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>299</x>
+     <y>199</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>onStartListening()</slot>
+  <slot>onSendMessage()</slot>
+ </slots>
+</ui>
