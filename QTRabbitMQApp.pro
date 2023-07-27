@@ -4,7 +4,9 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui widgets
+QTPLUGIN += qandroid
+
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -41,7 +43,7 @@ message("--------------------------------------------------------------------")
 mac{
     contains(QT_MAJOR_VERSION, 6): {
         message("------------- Qt 6 MAC OS")
-        LIBS += -L$$PWD/lib/qt6/mac/ -lrabbitmq
+      #  LIBS += -L$$PWD/lib/qt6/mac/ -lrabbitmq
     }
 }
 
@@ -98,6 +100,18 @@ android{
     }
 }
 
+ios{
+    contains(QT_MAJOR_VERSION, 5): {
+        message("------------- Qt 5 IOS")
+        LIBS += -L$$PWD/lib/qt5/ios/ -lrabbitmq
+    }
+
+    contains(QT_MAJOR_VERSION, 6): {
+        message("------------- Qt 6 IOS")
+        LIBS += -L$$PWD/lib/qt6/ios/ -lrabbitmq
+    }
+}
+
 
 DISTFILES += \
     android/AndroidManifest.xml \
@@ -109,3 +123,4 @@ DISTFILES += \
     android/gradlew.bat
 
 ANDROID_PACKAGE_SOURCE_DIR = $$PWD/android
+android: include(/Users/masoudbahrololoum/Library/Android/sdk/android_openssl/openssl.pri)
