@@ -40,26 +40,42 @@ message("------------- VERSION        = " + $$QMAKE_HOST.version)
 message("------------- OS VERSION DET = " + $$QMAKE_HOST.version_string)
 message("--------------------------------------------------------------------")
 
-mac{
+win32 {
+    contains(QT_MAJOR_VERSION, 5): {
+        message("------------- Qt 5 WIN OS")
+        *-g++* {
+            message("------------- MINGW")
+            LIBS += -L$$PWD/lib/qt5/win/mingw/ -lrabbitmq
+        }
+
+        *-msvc* {
+            message("------------- MSVC")
+            LIBS += -L$$PWD/lib/qt5/win/msvc/ -lrabbitmq
+        }
+    }
     contains(QT_MAJOR_VERSION, 6): {
-        message("------------- Qt 6 MAC OS")
-      #  LIBS += -L$$PWD/lib/qt6/mac/ -lrabbitmq
+        message("------------- Qt 6 WIN OS")
+        *-g++* {
+            message("------------- MINGW")
+            LIBS += -L$$PWD/lib/qt6/win/mingw/ -lrabbitmq
+        }
+
+        *-msvc* {
+            message("------------- MSVC")
+            LIBS += -L$$PWD/lib/qt6/win/msvc/ -lrabbitmq
+        }
     }
 }
 
-mac{
+mac {
     contains(QT_MAJOR_VERSION, 5): {
         message("------------- Qt 5 MAC OS")
         LIBS += -L$$PWD/lib/qt5/mac/ -lrabbitmq
     }
-}
 
-win32 {
-    message("------------- WIN OS")
-
-    contains(QT_ARCH, x86_64): {
-        message("---OK---")
-        LIBS += -L$$PWD/lib/qt5/win/ -lrabbitmq
+    contains(QT_MAJOR_VERSION, 6): {
+        message("------------- Qt 6 MAC OS")
+        # LIBS += -L$$PWD/lib/qt6/mac/ -lrabbitmq
     }
 }
 
