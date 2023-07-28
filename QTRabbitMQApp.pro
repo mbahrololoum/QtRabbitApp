@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui svg
 #QTPLUGIN += qandroid
 
 #CONFIG += c++17
