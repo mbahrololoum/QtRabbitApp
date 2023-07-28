@@ -125,7 +125,7 @@ ios{
 
     contains(QT_MAJOR_VERSION, 6): {
         message("------------- Qt 6 IOS")
-        #LIBS += -L$$PWD/lib/qt6/ios/ -lrabbitmq
+        LIBS += -L$$PWD/lib/qt6/ios/ -lrabbitmq
     }
 }
 
