@@ -4,14 +4,15 @@
 #
 #-------------------------------------------------
 
-QT       += core gui widgets
-QTPLUGIN += qandroid
+QT       += core gui
+#QTPLUGIN += qandroid
 
+#CONFIG += c++17
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = QTRabbitMQApp
-TEMPLATE = app
+#TEMPLATE = app
 
 
 SOURCES += main.cpp\
@@ -69,12 +70,12 @@ win32 {
 
 mac {
     contains(QT_MAJOR_VERSION, 5): {
-        message("------------- Qt 5 MAC OS")
-        LIBS += -L$$PWD/lib/qt5/mac/ -lrabbitmq
+        # message("------------- Qt 5 MAC OS")
+        # LIBS += -L$$PWD/lib/qt5/mac/ -lrabbitmq
     }
 
     contains(QT_MAJOR_VERSION, 6): {
-        message("------------- Qt 6 MAC OS")
+        # message("------------- Qt 6 MAC OS")
         # LIBS += -L$$PWD/lib/qt6/mac/ -lrabbitmq
     }
 }
@@ -111,7 +112,7 @@ android{
 
         contains(QT_ARCH, arm64-v8a): {
             message("------------- Qt 6 ANDROID OS v8")
-            LIBS += -L$$PWD/lib/qt6/android/armv8/ -lrabbitmq
+            #LIBS += -L$$PWD/lib/qt6/android/armv8/ -lrabbitmq
         }
     }
 }
