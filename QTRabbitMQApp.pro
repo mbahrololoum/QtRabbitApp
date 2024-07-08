@@ -71,12 +71,12 @@ win32 {
 mac {
     contains(QT_MAJOR_VERSION, 5): {
         # message("------------- Qt 5 MAC OS")
-        # LIBS += -L$$PWD/lib/qt5/mac/ -lrabbitmq
+         LIBS += -L$$PWD/lib/qt5/mac/ -lrabbitmq
     }
 
     contains(QT_MAJOR_VERSION, 6): {
         # message("------------- Qt 6 MAC OS")
-        # LIBS += -L$$PWD/lib/qt6/mac/ -lrabbitmq
+         LIBS += -L$$PWD/lib/qt6/mac/ -lrabbitmq
     }
 }
 

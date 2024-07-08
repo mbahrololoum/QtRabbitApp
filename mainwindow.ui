@@ -141,7 +141,7 @@
              <x>0</x>
              <y>0</y>
              <width>591</width>
-             <height>120</height>
+             <height>122</height>
             </rect>
            </property>
            <widget class="QTextEdit" name="teServerLog">
@@ -233,7 +233,7 @@
         <item row="1" column="2" colspan="2">
          <widget class="QLineEdit" name="leClientExchange">
           <property name="text">
-           <string>ex-masoud</string>
+           <string>EX-Mihan-DB</string>
           </property>
          </widget>
         </item>
@@ -247,7 +247,7 @@
         <item row="1" column="5" colspan="2">
          <widget class="QLineEdit" name="leClientRoutingKey">
           <property name="text">
-           <string>r</string>
+           <string/>
           </property>
          </widget>
         </item>
@@ -261,7 +261,7 @@
         <item row="2" column="2" colspan="7">
          <widget class="QLineEdit" name="leClientMessage">
           <property name="text">
-           <string>Hello World!</string>
+           <string>{ &quot;userId&quot; : 34, &quot;lat&quot;: &quot;31.3333&quot; , &quot;lng&quot;: &quot;51.66666&quot; }</string>
           </property>
          </widget>
         </item>
@@ -284,7 +284,7 @@
      <x>0</x>
      <y>0</y>
      <width>663</width>
-     <height>24</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>
